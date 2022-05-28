@@ -11,8 +11,8 @@ import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.configuration.ConfigurationSection
 import org.bukkit.configuration.file.YamlConfiguration
-import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer
-import org.bukkit.craftbukkit.v1_18_R1.inventory.CraftItemStack
+import org.bukkit.craftbukkit.v1_16_R5.entity.CraftPlayer
+import org.bukkit.craftbukkit.v1_16_R5.inventory.CraftItemStack
 import org.bukkit.entity.Player
 import kotlin.math.min
 
