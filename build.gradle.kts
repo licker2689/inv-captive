@@ -14,12 +14,34 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
-    maven(url = "https://jitpack.io")
+    maven { url = uri("https://jitpack.io") }
+    maven { url = uri("http://dpp.dpnw.site:8081/repository/maven-public/") }
+    maven {
+        name = "Mojang"
+        url = uri("https://libraries.minecraft.net/")
+    }
+    maven {
+        name = "Spigot"
+        url = uri("https://repo.dmulloy2.net/repository/public/")
+    }
+    maven {
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        content {
+            group = includeGroup("org.bukkit")
+            group = includeGroup("org.spigotmc")
+        }
+    }
+    maven {
+        url = uri("https://repo.spring.io/plugins-release/")
+    }
+
+
 }
 
+
 dependencies {
-    compileOnly(kotlin("stdlib"))
-    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1-native-mt")
     compileOnly("io.papermc.paper:paper-api:1.16.5-R5.1-SNAPSHOT")
     compileOnly("org.spigotmc:spigot:1.16.5-R5.1-SNAPSHOT")
 
