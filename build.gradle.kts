@@ -18,10 +18,13 @@ repositories {
 }
 
 dependencies {
-    compileOnly(kotlin("stdlib"))
-    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-    compileOnly("io.papermc.paper:paper-api:1.18.1-R0.1-SNAPSHOT")
-    compileOnly("org.spigotmc:spigot:1.18.1-R0.1-SNAPSHOT")
+
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1-native-mt")
+    compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot:1.18.2-R0.1-SNAPSHOT")
+    compileOnly("org.shredzone.commons:commons-suncalc:3.5")
+
 
     implementation("com.github.noonmaru:tap:3.2.7")
     implementation("com.github.noonmaru:kommand:0.6.4")
