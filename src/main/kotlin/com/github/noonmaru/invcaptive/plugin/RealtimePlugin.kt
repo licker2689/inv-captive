@@ -1,19 +1,19 @@
 package com.github.noonmaru.invcaptive.plugin
 
-import io.github.monun.realtime.plugin.TimeAdapter
+import com.github.noonmaru.invcaptive.plugin.TimeAdapter
 import org.bukkit.Bukkit
 import org.bukkit.GameRule
 import org.bukkit.configuration.ConfigurationSection
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
+import org.shredzone.commons.suncalc.SunTimes
 import java.io.File
 import java.time.Instant
+import java.time.temporal.ChronoUnit
 import java.util.*
 
 
-/**
- * @author Monun
- */
+
 class RealtimePlugin : JavaPlugin(), Runnable {
     private var latitude = 0.0
 
@@ -35,7 +35,7 @@ class RealtimePlugin : JavaPlugin(), Runnable {
         }
     }
 
-   /* private fun updateTimeAdapter(now: Instant) {
+ private fun updateTimeAdapter(now: Instant) {
         val todaySunTimes: SunTimes = SunTimes.compute().on(now).midnight().at(latitude, longitude).execute()
 
         val todaySunrise = todaySunTimes.rise!!.toInstant()
@@ -64,7 +64,7 @@ class RealtimePlugin : JavaPlugin(), Runnable {
         timeAdapter = TimeAdapter(todaySunset, tomorrowSunrise, TimeAdapter.Type.NIGHT)
         logger.info("일몰 이후 자정 이전 (밤)" + Date.from(timeAdapter.from) + " -> " + Date.from(timeAdapter.to))
     }
-*///여기까지 시간 변환부로 추측.
+//여기까지 시간 변환부로 추측.
     private var lastTick: Long = 0
 
     //config reloader

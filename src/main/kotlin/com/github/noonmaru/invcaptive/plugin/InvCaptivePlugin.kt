@@ -40,7 +40,7 @@ class InvCaptivePlugin : JavaPlugin(), Listener {
         val map = EnumMap<Material, Int>(Material::class.java)
 
         for (i in 0 until count) {
-            map[list[i]] = i
+            map[list[i]] =ｉ
         }
 
         this.slotsByType = map

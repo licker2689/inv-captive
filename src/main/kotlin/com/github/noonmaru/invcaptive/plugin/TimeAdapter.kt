@@ -1,9 +1,9 @@
-package io.github.monun.realtime.plugin
+package com.github.noonmaru.invcaptive.plugin
 
 import java.time.Instant
 
 class TimeAdapter(val from: Instant, val to: Instant, type: Type) {
-    val tickOffset: Int = type.offset
+    private val tickOffset: Int = type.offset
     val tickDuration: Int = type.period
 
     fun isValid(now: Instant): Boolean {
