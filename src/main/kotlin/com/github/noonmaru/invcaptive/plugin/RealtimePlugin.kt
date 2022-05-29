@@ -12,7 +12,7 @@ import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.*
 
-
+ 
 
 class RealtimePlugin : JavaPlugin(), Runnable {
     private var latitude = 0.0
